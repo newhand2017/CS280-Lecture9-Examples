@@ -11,9 +11,9 @@ namespace Example01
         //-------------------------------------------------
         //
         //-------------------------------------------------
-        void Register(IOberverable o);
+        void Register(IObserver o);
 
-        void RemoveObserver(IOberverable o);
+        void RemoveObserver(IObserver o);
 
         void Notify();
 

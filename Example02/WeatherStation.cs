@@ -18,6 +18,8 @@ namespace Example02
 
         private List<IObserver> observers;
 
+        public string stationName { get; set; }
+
         //-------------------------------------------------
 
         public WeatherStation()
@@ -33,22 +35,19 @@ namespace Example02
 
         //-------------------------------------------------
         //右鍵生成
-        public void Register(IOberverable o)
+        void IOberverable.Register(IObserver o)
         {
             observers.Add(o);
         }
 
-        public void RemoveObserver(IOberverable o)
+        void IOberverable.RemoveObserver(IObserver o)
         {
             observers.Remove(o);
         }
 
-        public void Notify()
+        void IOberverable.Notify()
         {
-            foreach (IObserver o in observers)
-            {
-                o.UpdateView(this, this.data);
-            }
+            o.UpdateView(this, this.data);
         }
 
         public void UpdateView(object sender, EventArgs e)

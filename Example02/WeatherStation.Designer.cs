@@ -145,6 +145,6 @@
         private System.Windows.Forms.TextBox humidtyTextBox;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Label messageLabel;
-        private System.Windows.Forms.Timer dataTimer;
+        public System.Windows.Forms.Timer dataTimer;
     }
 }
